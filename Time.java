@@ -1,7 +1,21 @@
 public class Time
 {
   // TODO: Part A - put your attributes here
+private int hours;
+private int minutes;
+private int seconds;
 
+public Time(int h, int m, int s)
+{
+  int hours = h;
+  int minutes = m;
+  int seconds = s;
+}
+
+public Time()
+{
+  this(0,0,0);
+}
 
   // TODO: Part B - create your non-default constructor
   /**
@@ -27,11 +41,13 @@ public class Time
     }
     return output + value;
   }
+  // pad use to take in the value and add the 0 in front if he value is less than 0
 
   // TODO: Part E - complete the toString method; use the pad method as part of your solution
   public String toString()
   {
-    return null;
+    return pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+
   }
 
   // TODO: Part F - write the tick method
