@@ -53,7 +53,24 @@ public Time()
   // TODO: Part F - write the tick method
   public void tick()
   {
+    seconds++;
 
+    if (seconds == 60)
+    {
+      seconds = 0;
+      minutes++;
+    }
+
+    if (minutes == 60)
+    {
+      minutes = 0;
+      hours++;
+    }
+
+    if (hours == 24)
+    {
+      hours = 0;
+    }
   }
 
   // TODO: Part G - write the add method
